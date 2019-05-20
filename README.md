@@ -40,7 +40,9 @@ The real beauty of regular expressions is revealed in its use of metacharacters.
 
 ### Only specific characters
 
-If I want to match all instances of vowels in a string, the RegEx `/aeiou/` won't work (feel free to try it), as it will only match the entire string "aeiou" - which clearly isn't in our text. Instead let's use square brackets: `/[aeiou]/` - this is looking for only **one single** character in our text which matches any of the characters inside the square brackets. If you add this RegEx to our rubular, you'll see every vowel highlighted in your match result.
+If I want to match all instances of vowels in a string, the RegEx `/aeiou/` won't work (feel free to try it), as it will only match the entire string "aeiou" - which clearly isn't in our text. Instead let's use square brackets: `/[aeiou]/` - this is looking for only **one single** character in our text which matches any of the characters inside the square brackets. If you add this RegEx to our rubular, you'll see every lower case vowel highlighted in your match result. If you add a space before your Regex: `/ [aeiou]/`, you get all the vowels preceded by a space. 
+
+If you tried this, you probably noticed that the O of "O me," was not highlighted. This is because Regular Expressions are case sensitive, meaning a is not the same as A. The RexEx `/[aeiouAEIOU]/` would return ALL of your vowels. 
 
 ### Ranges
 
